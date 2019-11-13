@@ -22,9 +22,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Controllers
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api/employees', employeesRouter)
+app.use('/api/employees', employeesRouter);
+app.use('/api/members', membersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
