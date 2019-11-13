@@ -1,50 +1,39 @@
-const Employee = require('../models').employee;
+const Salesperson = require('../models').salesperson;
 
 findAll = (req, res) => {
     const { count = 100 } = req.query;
     return (
-    Employee.findAll({
-        include: [{
-            all: true
-        }],
-        limit: count
-    })
-        .then((employees) => {res.status(200).send(employees)}) 
-        .catch((err) => res.status(400).send(err))
+        Employee.findAll({
+            include: [{
+                all: true
+            }],
+            limit: count
+        })
+            .then((employees) => { res.status(200).send(employees) })
+            .catch((err) => res.status(400).send(err))
     );
 }
-    add = (req, res) => {
 
-        const{
-            first_name,
-            last_name,
-            ssn,
-            city,
-            state,
-            zip,
-            street,
-            phone_number,
-            sex,
-            email
-        } = req.body;
-
-        return Employee
-        .create({
-            first_name,
-            last_name,
-            ssn,
-            city,
-            state,
-            zip,
-            street,
-            phone_number,
-            sex,
-            email
+findById = (req, res) => {
+    const { id } = req.params;
+    return (
+        Employee.findById(id, {
+            include: [{
+                all: true
+            }]
         })
-        .then((employees) => {res.status(200).send(employee)}) 
-        .catch((err) => res.status(400).send(err))
-    }
+            .then(employee => {
+                if (!employee) {
+                    return res.status(404).send({
+                        message: 'Employee Not Found',
+                    });
+                }
+                return res.status(200).send(employee);
+            })
+    );
+}
+
 module.exports = {
     findAll,
-    add
+    findById
 }
