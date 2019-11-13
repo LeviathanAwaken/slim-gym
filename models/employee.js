@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
         state: { type: DataTypes.STRING(2), allowNull: false },
         zip: { type: DataTypes.STRING(5), allowNull: false },
         street: { type: DataTypes.STRING, allowNull: false },
-        employee_id: { types: DataTypes.STRING, allowNull: false },
         phone_number: { type: DataTypes.STRING, allowNull: false },
         sex: { type: DataTypes.STRING(1), allowNull: false },
         email: { type: DataTypes.STRING, allowNull: false },

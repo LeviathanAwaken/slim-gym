@@ -23,7 +23,6 @@ findAll = (req, res) => {
             state,
             zip,
             street,
-            employee_id,
             phone_number,
             sex,
             email
@@ -38,7 +37,6 @@ findAll = (req, res) => {
             state,
             zip,
             street,
-            employee_id,
             phone_number,
             sex,
             email
