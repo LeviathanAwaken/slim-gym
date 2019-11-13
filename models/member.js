@@ -13,5 +13,14 @@ module.exports = (sequelize, DataTypes) => {
         tier: { type: DataTypes.STRING, allowNull: false }
        });
     
+
+  /*Member.associate = function (models) {
+    Member.hasMany(models.sale, {
+      foreignKey: 'member_id'
+    })
+    Member.hasMany(models.visit, {
+      foreignKey: 'member_id'
+    })
+  } */
     return Member;
 }

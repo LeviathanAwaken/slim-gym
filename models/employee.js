@@ -1,5 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     var Employee = sequelize.define('employee', {
+        employee_id: { type: DataTypes.STRING, allowNull: false },
         first_name: { type: DataTypes.STRING, allowNull: false },
         last_name: { type: DataTypes.STRING, allowNull: false },
         ssn: { type: DataTypes.STRING, allowNull: false },
@@ -12,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         email: { type: DataTypes.STRING, allowNull: false },
         image: { type: DataTypes.STRING}
     });
-    
+        
     return Employee;
 }
 
