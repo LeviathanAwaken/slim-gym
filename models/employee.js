@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
         phone_number: { type: DataTypes.STRING, allowNull: false },
         sex: { type: DataTypes.STRING(1), allowNull: false },
         email: { type: DataTypes.STRING, allowNull: false },
-        image: { type: DataTypes.STRING}
     });
     Employee.associate = function (models) {
         Employee.hasMany(models.offering, {
