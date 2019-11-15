@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controllers').member;
+var controller = require('../controllers').payment;
 
-router.get('/', controller.findAll);
 router.post('/', controller.add);
+router.get('/', controller.findAll)
 
 module.exports = router;
