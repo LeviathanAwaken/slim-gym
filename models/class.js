@@ -8,8 +8,12 @@ module.exports = (sequelize, DataTypes) => {
     Class.associate = function (models) {
         Class.hasMany(models.offering, {
           foreignKey: 'class_id'
-        })
-        }
+        });
+
+        Class.hasMany(models.giveaccess, {
+            foreignKey: 'class_id'
+        });
+    }
 
     return Class;
 };
