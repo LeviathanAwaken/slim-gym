@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     zip: { type: DataTypes.STRING(5), allowNull: false },
     city: { type: DataTypes.STRING, allowNull: false },
     street: { type: DataTypes.STRING, allowNull: false },
+    phone_number: { type: DataTypes.STRING, allowNull: false },
     tier: { type: DataTypes.STRING, allowNull: false }
   });
 
