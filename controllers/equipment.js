@@ -1,15 +1,15 @@
-const Employee = require('../models').employee;
+const Equipment = require('../models').equipment;
 
 findAll = (req, res) => {
     const { count = 100 } = req.query;
     return (
-        Employee.findAll({
+        Equipment.findAll({
             include: [{
-                all: true
+                all: true,
             }],
             limit: count
         })
-            .then((employees) => { res.status(200).send(employees) })
+            .then((equipments) => {res.status(200).send(equipments)})
             .catch((err) => res.status(400).send(err))
     );
 }
@@ -17,18 +17,18 @@ findAll = (req, res) => {
 findById = (req, res) => {
     const { id } = req.params;
     return (
-        Employee.findById(id, {
+        Equipment.findById(id, {
             include: [{
                 all: true
             }]
         })
-            .then(employee => {
-                if (!employee) {
+            .then(equipment => {
+                if(!equipment) {
                     return res.status(404).send({
-                        message: 'Employee Not Found',
-                    });
+                        message: 'Equipment Not Found',
+                      });
                 }
-                return res.status(200).send(employee);
+                return res.status(200).send(equipment);
             })
     );
 }
