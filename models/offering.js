@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
        employee_id: { type: DataTypes.INTEGER, allowNull: false },
        roomname: { type: DataTypes.STRING, allowNull: false },
        date: { type: DataTypes.DATEONLY, allowNull: false},
-       time: { type: DataTypes.INTEGER, allowNull: false } 
+       time: { type: DataTypes.STRING, allowNull: false } 
     });
 
         return Offering;

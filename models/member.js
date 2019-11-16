@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     city: { type: DataTypes.STRING, allowNull: false },
     street: { type: DataTypes.STRING, allowNull: false },
     phone_number: { type: DataTypes.STRING, allowNull: false },
-    tier: { type: DataTypes.STRING, allowNull: false }
+    tier: { type: DataTypes.INTEGER(1), allowNull: false }
   });
 
   Member.associate = function(models) {

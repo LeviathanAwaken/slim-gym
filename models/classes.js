@@ -1,19 +1,19 @@
 module.exports = (sequelize, DataTypes) => {
-    var Class = sequelize.define('class', {
+    var Classes = sequelize.define('classes', {
         name: { type: DataTypes.STRING, allowNull: false },
         cost: { type: DataTypes.FLOAT(2), allowNull: false },
         description: { type: DataTypes.STRING, allowNull: false }
     });
 
-    Class.associate = function (models) {
-        Class.hasMany(models.offering, {
+    Classes.associate = function (models) {
+        Classes.hasMany(models.offering, {
           foreignKey: 'class_id'
         });
 
-        Class.hasMany(models.giveaccess, {
+        Classes.hasMany(models.giveaccess, {
             foreignKey: 'class_id'
         });
     }
 
-    return Class;
+    return Classes;
 };
