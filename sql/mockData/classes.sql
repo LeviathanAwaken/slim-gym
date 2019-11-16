@@ -1,4 +1,4 @@
-INSERT INTO "class" VALUES
+INSERT INTO "classes" VALUES
     (default, 'Grantley', 22, 'nulla tempus vivamus in felis'),
     (default, 'Merle', 43, 'in hac habitasse platea dictumst'),
     (default, 'Creight', 22, 'nascetur ridiculus mus vivamus vestibulum'),
