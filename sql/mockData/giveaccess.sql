@@ -1,0 +1,11 @@
+INSERT INTO "giveaccess" VALUES
+    (default, 1, 1, 3),
+    (default, 2, 2, 3),
+    (default, 3, 3, 2),
+    (default, 4, 4, 2),
+    (default, 5, 5, 3),
+    (default, 6, 6, 3),
+    (default, 7, 7, 3),
+    (default, 8, 8, 5),
+    (default, 9, 9, 4),
+    (default, 10, 10, 4);
